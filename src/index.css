@@ -1,0 +1,140 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 48 20% 98%; /* Off-white #FAFAF5 */
+    --foreground: 210 24% 7%; /* Preto profundo #121212 */
+
+    --card: 48 20% 98%;
+    --card-foreground: 210 24% 7%;
+
+    --popover: 48 20% 98%;
+    --popover-foreground: 210 24% 7%;
+
+    --primary: 210 24% 7%;
+    --primary-foreground: 48 20% 98%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 210 24% 7%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 210 40% 96%;
+    --accent-foreground: 210 24% 7%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 210 24% 7%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 48 20% 98%;
+    --sidebar-foreground: 210 24% 7%;
+    --sidebar-primary: 210 24% 7%;
+    --sidebar-primary-foreground: 48 20% 98%;
+    --sidebar-accent: 210 40% 96%;
+    --sidebar-accent-foreground: 210 24% 7%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-ring: 210 24% 7%;
+  }
+
+  .dark {
+    --background: 210 24% 7%;
+    --foreground: 48 20% 98%;
+
+    --card: 210 24% 7%;
+    --card-foreground: 48 20% 98%;
+
+    --popover: 210 24% 7%;
+    --popover-foreground: 48 20% 98%;
+
+    --primary: 48 20% 98%;
+    --primary-foreground: 210 24% 7%;
+
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 48 20% 98%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 217 33% 17%;
+    --accent-foreground: 48 20% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 212 27% 84%;
+
+    --sidebar-background: 210 24% 7%;
+    --sidebar-foreground: 48 20% 98%;
+    --sidebar-primary: 224 76% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 217 33% 17%;
+    --sidebar-accent-foreground: 48 20% 98%;
+    --sidebar-border: 217 33% 17%;
+    --sidebar-ring: 212 27% 84%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    background-color: #FAFAF5; /* Off-white Bernabeu */
+    color: #121212; /* Preto profundo */
+  }
+}
+
+/* Custom styles for Bernabeu Barber */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Form improvements */
+input, textarea, select {
+  border: 1px solid #d1d5db !important;
+  color: #121212 !important;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #6b7280 !important; /* text-gray-500 */
+}
+
+/* Button improvements */
+button {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Card hover effects */
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Status badges */
+.status-badge {
+  @apply px-2 py-1 rounded-full text-xs font-medium;
+}
